@@ -5,8 +5,6 @@
 
 Esta é uma API simples desenvolvida com **FastAPI** para autenticação de usuários usando tokens **JWT**. O banco de dados **SQLite** armazena as informações de usuários, incluindo nomes, senhas criptografadas e roles (funções). A API inclui rotas protegidas que só podem ser acessadas por usuários autenticados.
 
-Desafio proposto pela 200dev para TIVIT
-
 ## Funcionalidades
 
 1. **Autenticação com JWT:**
@@ -50,8 +48,7 @@ Desafio proposto pela 200dev para TIVIT
    ```
 
 4. **Configure o Banco de Dados:**
-   O arquivo `generate_data.py` é responsável por criar o banco de dados SQLite (`users.db`), a tabela `users` e popular o banco com os usuários padrão. Execute o seguinte comando para garantir que o banco esteja configurado corretamente:
-
+   Execute o script de inicialização para criar o banco de dados e adicionar os usuários padrão:
    ```bash
    python generate_data.py
    ```
@@ -91,10 +88,6 @@ Retorna uma mensagem personalizada para usuários com o papel `"user"`.
 - **Headers:**
   - `Authorization: Bearer <JWT_TOKEN>`
 
-- **Body:** (enviar no formato `x-www-form-urlencoded` para obter o token JWT antes de acessar as rotas protegidas)
-  - `username`: Nome de usuário.
-  - `password`: Senha.
-
 - **Exemplo de Resposta (Acesso Permitido):**
   ```json
   {
@@ -117,10 +110,6 @@ Retorna uma mensagem personalizada para usuários com o papel `"admin"`.
 
 - **Headers:**
   - `Authorization: Bearer <JWT_TOKEN>`
-
-- **Body:** (enviar no formato `x-www-form-urlencoded` para obter o token JWT antes de acessar as rotas protegidas)
-  - `username`: Nome de usuário.
-  - `password`: Senha.
 
 - **Exemplo de Resposta (Acesso Permitido):**
   ```json
@@ -178,7 +167,22 @@ curl -X POST "http://127.0.0.1:8000/token" -d "username=admin&password=JKSipm0YH
    curl -H "Authorization: Bearer <JWT_TOKEN>" http://127.0.0.1:8000/admin
    ```
 
+---
+
+## Observações
+
+- Certifique-se de usar uma `SECRET_KEY` segura para gerar tokens JWT.
+- Armazene a `SECRET_KEY` e outras configurações sensíveis em variáveis de ambiente.
+- Para produção, considere usar um banco de dados mais robusto, como PostgreSQL ou MySQL.
 
 ---
 
-Desenvolvido por Gustavo Kertisz Maciel
+## Melhorias Futuras
+
+1. Adicionar suporte para registro de novos usuários.
+2. Implementar expiração e renovação de tokens.
+3. Utilizar um sistema de logs para auditoria.
+
+---
+
+Desenvolvido com ❤️ por [Seu Nome].
