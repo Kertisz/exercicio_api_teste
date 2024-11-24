@@ -9,7 +9,7 @@ Desafio proposto pela 200dev para TIVIT
 
 ---
 
-## Oberveções
+## Observações
 - Deixo também a collection do Postman utilizada para o desenvolvimento do teste.
 
 ---
