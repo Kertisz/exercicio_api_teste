@@ -6,6 +6,9 @@
 Esta é uma API simples desenvolvida com **FastAPI** para autenticação de usuários usando tokens **JWT**. O banco de dados **SQLite** armazena as informações de usuários, incluindo nomes, senhas criptografadas e roles (funções). A API inclui rotas protegidas que só podem ser acessadas por usuários autenticados.
 
 Desafio proposto pela 200dev para TIVIT
+---
+## Deixo também a collection do Postman utilizada para o desenvolvimento do teste.
+---
 
 ## Funcionalidades
 
