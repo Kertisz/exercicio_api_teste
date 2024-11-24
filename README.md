@@ -1,5 +1,5 @@
 
-# FastAPI Authentication with SQLite
+# FastAPI com autenticação JWT e SQLite
 
 ## Descrição do Projeto
 
